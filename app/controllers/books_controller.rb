@@ -1,12 +1,12 @@
 class BooksController < ApplicationController
-  def index
+  def new
   end
 
   def show
   	@book = Book.find(params[:id])
   end
 
-  def new
+  def index
   	@book = Book.new
   	# order(created_at: :desc) 降順にする
     @books = Book.all.order(created_at: :desc)
